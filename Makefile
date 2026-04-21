@@ -7,7 +7,7 @@ EMACS = emacs
 endif
 
 emacs = $(EMACS)
-emacs_version = $(shell $(emacs) --batch --eval \
+emacs_version = $(shell $(/usr/local/emacs-pgtk/bin/emacs-pgtk) --batch --eval \
 		'(princ (format "%s.%s" emacs-major-version emacs-minor-version))')
 $(info Using Emacs $(emacs_version))
 
